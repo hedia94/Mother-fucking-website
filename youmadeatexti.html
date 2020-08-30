@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>txti-fast web pages for everybody</title>
+        <link rel="shortcut icon"href="http://txti.es/favicon-196x196.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#envoi").click(function(){
+        var comment = $.trim($("#email").val());
+            if(comment == ""){
+                $("#adress2").show();
+        $("#adress").hide();
+            }
+        else{
+            $("#par").show();
+        $("#form").hide();
+        }
+      });
+      
+    });
+    </script>
+    </head>
+    <body style="font-family: sans-serif;width:600px;margin:auto;">
+        <h1>You made a txti!</h1>
+        <div id="form">
+        <p>Please email the important information below to yourself for safe keeping. It cannot be accessed again!</p>
+        <div><form method="post" action="traitement.php">
+            <label for="#email"id ="adress">Email adress</label>
+            <label for="#email"id ="adress2" style="color:red;display: none;">That email didn't work. Try again.</label>
+            <input type="email" id="email" name="email" style="height:30px;width:600px;margin-bottom:30px;">
+            <button type="submit" id="envoi">Email the below info</button>
+        </form></div><hr></div>
+        <div style="display:none;" id="par"><hr>Email sent (check your junkmail if you don't see it). Enjoy your txti!<hr></div>
+    <h2>You will need this code to change this txti:</h2>
+    <p>Your edit code: <strong>itinp</strong></p>
+    <h2>The link to your page is here:</h2>
+    <a href="#">txti.es/yjrjq</a>
+   <h2>Edit your page here:</h2> 
+   <a href="">txti.es/yjrjq/edit</a>
+   <p style="text-align:right;"><a href="texties.html">txti home</a></p>
+    </body>
+    
+    
+    
+    </html>
