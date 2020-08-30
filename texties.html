@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>txti - Fast web pages for everybody </title>
+        <link rel="shortcut icon" href="http://txti.es/favicon-196x196.png">
+    <style>
+        body{
+            font-family:sans-serif;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    
+    $(document).ready(function(){
+      $("#save").click(function(){
+        var comment = $.trim($("#content").val());
+            if(comment == ""){
+                $("#blank").show();
+        $("#nonblank").hide();
+            }
+        else{
+            window.location.href=('youmadeatexti.html')
+        }
+      });
+      
+    });
+    $(document).ready(function(){
+      $("#show").click(function(){
+                $("#fieldset").show();
+                
+      });
+      
+    });
+    </script>
+    </head>
+    <body style="margin-left:350px;">
+        <h1 ><a href="texties.html">txti</a></h1>
+        <p>Fast web pages for everybody.</p>
+<a href="what is txti.html">What is txti?</a> 
+"|"
+<a href="howtomaketxties.html">How to use txti</a>
+<h2>Create a txti</h2>    
+<!--form-->
+<form method="post" action="traitement.php">
+    <p>
+        <label for="content" id="nonblank" >content (required)</label>
+        <label for="content" style="display:none; color:red;" id="blank">content (cannot be blank)</label>
+<p style="margin-top: -15px;"><textarea id="content" name="content" style="height: 130px; border-width: 1px;
+    border-style: solid; border-color: rgb(169, 169, 169);width:614.391px;
+ ;position:relative;"></textarea></p>
+    </p>
+</form>
+<fieldset id="fieldset" style="height: 180px; border-width: 2px;
+border-style: solid; border-color: rgb(169, 169, 169);width:500px;
+;position:relative;display:none;">
+    <legend>Advanced txti options</legend>
+    <div style="margin-top: 15px;"><label for="#url">Custom URL (Letters, numbers, dashes. Goes after txti.es/)</label><input type="text" id="url" name="url" style="height:30px;width:580px;"> </div>
+<div style="margin-top: 15px;"><label for="edit" >Custom edit code</label><input type="text" id="edit" name="edit"style="height:30px;width:580px;""></div>
+</fieldset>
+
+<p>By continuing, you agree to the <a href="termsofservice.html">terms of service.</a></p>
+<button id="save">Save and done</button>
+or
+<button id="show">show more options</button>
+
+
+
+
+</body>
+</html>
